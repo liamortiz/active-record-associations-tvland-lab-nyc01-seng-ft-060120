@@ -6,7 +6,6 @@ class Actor < ActiveRecord::Base
     result = self.characters.map do |character|
       "#{character.name} - #{character.show.name}"
     end
-    binding.pry
   end
   
   def full_name
