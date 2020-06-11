@@ -4,7 +4,7 @@ class Actor < ActiveRecord::Base
   
   def list_roles
     result = self.characters.map do |character|
-      [&:name, character.show.name]
+      [character.name, character.show.name]
     end
     binding.pry
   end
