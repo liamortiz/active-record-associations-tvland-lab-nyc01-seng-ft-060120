@@ -3,7 +3,7 @@ class Actor < ActiveRecord::Base
   has_many :shows, through: :characters
   
   def list_roles
-    result = self.characters.map(&:name)
+    result = self.characters.map(&:show)
     binding.pry
   end
   
