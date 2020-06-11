@@ -4,6 +4,7 @@ class Actor < ActiveRecord::Base
   
   def list_roles
     self.characters.map{|character| character && character.show}
+    binding.pry
   end
   
   def full_name
