@@ -7,5 +7,6 @@ class Character < ActiveRecord::Base
   end
   
   def actors_list
+    self.actor.full_name
   end
 end
